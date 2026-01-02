@@ -41,6 +41,7 @@
         <module>cabinet-esb</module>
         <module>cabinet-repo</module>
         <module>patient-service</module>
+        <module>medecin-service</module>
         <!-- Add other modules here -->
     </modules>
 
