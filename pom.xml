@@ -42,6 +42,8 @@
         <module>cabinet-repo</module>
         <module>patient-service</module>
         <module>medecin-service</module>
+        <module>rendez-vous-service</module>
+        <module>consultation-service</module>
         <!-- Add other modules here -->
     </modules>
 
