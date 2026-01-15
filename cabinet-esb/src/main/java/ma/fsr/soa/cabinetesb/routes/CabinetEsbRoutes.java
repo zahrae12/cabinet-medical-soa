@@ -128,7 +128,8 @@ public class CabinetEsbRoutes extends RouteBuilder {
                 // On force la méthode HTTP vers le composant http
                 .setHeader(Exchange.HTTP_METHOD, header("CamelHttpMethod"))
                 // Appel HTTP interne
-                .toD("http:" + toHttpUrl + "?bridgeEndpoint=true&throwExceptionOnFailure=false")
+                .toD(toHttpUrl + "?bridgeEndpoint=true&throwExceptionOnFailure=false")
+
                 // Propage code HTTP du backend
                 .process(e -> {
                     Integer code = e.getMessage().getHeader(Exchange.HTTP_RESPONSE_CODE, Integer.class);
@@ -136,5 +137,4 @@ public class CabinetEsbRoutes extends RouteBuilder {
                         e.getMessage().setHeader(Exchange.HTTP_RESPONSE_CODE, code);
                     }
                 });
-    }
-}
+    }}
